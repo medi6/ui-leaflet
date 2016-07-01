@@ -1,5 +1,5 @@
 /*!
-*  ui-leaflet 1.0.0 2016-06-07
+*  ui-leaflet 1.0.0 2016-07-01
 *  ui-leaflet - An AngularJS directive to easily interact with Leaflet maps
 *  git: https://github.com/angular-ui/ui-leaflet
 */
@@ -4575,7 +4575,7 @@ angular.module('ui-leaflet').directive('markers',
                 //ie the options to only check !== (reference check) instead of angular.equals (slow)
                 newMarker = markerModels[name];
                 oldMarker = oldMarkerModels[name];
-                equals = angular.equals(newMarker,oldMarker) && isEqual;
+                equals = angular.equals(newMarker,oldMarker) === isEqual;
             }
             if (!isDefined(markerModels) ||
                 !Object.keys(markerModels).length ||
